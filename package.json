@@ -1,5 +1,5 @@
 {
-  "name": "webpack-base",
+  "name": "build-base",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,9 @@
     "dev": "webpack-dev-server --config ./lib/webpack.dev.js",
     "build": "webpack --config ./lib/webpack.prod.js",
     "lint": "eslint ./lib --fix",
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha"
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "commitmsg": "validate-commit-msg",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "keywords": [],
   "author": "",
@@ -55,6 +57,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",
     "file-loader": "^6.1.1",
+    "husky": "^4.3.0",
     "ignore-loader": "^0.1.2",
     "istanbul": "^0.4.5",
     "less-loader": "^7.0.2",
